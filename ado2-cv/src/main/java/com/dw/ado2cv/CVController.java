@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * @author maris
  */
-
 @Controller
-public class IndexController {
+public class CVController {
 
-    @GetMapping("/")
-    public String showIndex() {
-        return "index";
+    @GetMapping("/cv") // mostrar o cv estaticamente
+    public String estatico() {
+        return "cv"; 
     }
+
 }
