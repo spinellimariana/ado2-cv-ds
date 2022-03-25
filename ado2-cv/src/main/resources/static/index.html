@@ -14,9 +14,23 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container my-2" align="center">
-            <h1>INDEX</h1>
+            <br>
+            <br>
+            <br>
+            <h2>ADO 2 - CV GERADO NO CONTROLADOR</h2>
+            <br>
+            <h3>Aperte para gerar:</h3>
+            <br>
+            <a href="http://localhost:8080/cv?nome=Mariana%20Spinelli&dataNascimento=1987-11-09&telefone=(11)%2093277-0911&email=marispinelli@gmail.com" 
+               class="btn btn-success btn-lg">Carregar</a>
 
-            <!--<a th:href="@{/cv}" type="button" class="btn btn-primary btn-lg btn-block">Carregar</a>-->
+               <!-- 
+               OBERVAÇÃO: para ficar mais bonito e mais fácil de gerar o CV deixei a query string pronta com
+               os meus dados dentro de um botão apenas para gerar
+               
+               O código está gerando os dados de qualquer pessoa, basta usar o padrão da query que consta nesse link
+               com os dados de outra pessoa
+               -->
         </div>
     </body>
 </html>

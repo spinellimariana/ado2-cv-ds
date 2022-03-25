@@ -18,25 +18,20 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CVController {
 
-//    @GetMapping("/cv") // mostrar o cv estaticamente
-//    public String estatico() {
-//        return "cv"; 
-//    }
+    //usar o modelo de query string abaixo para gerar dados difentes. Os dados estão gerados no método abaixo
+    //cv?nome=MARIANA SPINELLI&dataNascimento=1987-11-09&telefone=(11) 93277-0911&email=marispinelli@gmail.com
+    
     @GetMapping("/cv")
-        //cv?nome=Mariana Spinelli&dataNascimento=1987-11-09&telefone=(11)93277-0911&email=marispinelli@gmail.com
     public ModelAndView curriculum(@RequestParam String nome,
-            @RequestParam String dataNascimento, 
-            @RequestParam String telefone, 
-            @RequestParam String email){
-        
-        
+            @RequestParam String dataNascimento,
+            @RequestParam String telefone,
+            @RequestParam String email) {
+
         DadosPessoais dados = new DadosPessoais(nome, dataNascimento, telefone, email);
         ModelAndView mv = new ModelAndView("cv");
         mv.addObject("dadosPessoais", dados);
         return mv;
-        
-        
-        
+
     }
 
 }
