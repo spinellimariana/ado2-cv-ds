@@ -13,117 +13,13 @@ and open the template in the editor.
         <link th:href="@{/estilos.css}" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <br>
-            <br>
-            <br>
-        </header>
-
-        <div class="fundo">
-            <div class="container">
-
-                <div class="foto perfil">
-                    <img src="foto.jpeg">
-                </div>
-
-
-                <div class="pessoal"> 
-                    <br>
-                    <h2>MARIANA SPINELLI</h2>
-                    <a href="https://www.linkedin.com/in/spinellimariana">Linkedin</a> 
-                    <br>
-                    <a href="https://github.com/spinellimariana">GitHub</a> 
-                    <br>
-                    <b>E-mail:</b> marispinelli@gmail.com <br>
-                    <b>Telefone:</b> (11) 93277-0911 <br>
-                    <b>Data Nascimento:</b> 09.11.1987 <br>
-                </div> <!-- pessoal -->
-
-
-                <div class="current">
-                    <h3>CURRENTLY:</h3>
-
-                    <b>IBM Brazil</b> <br><br>
-                    <i>IBM Consulting Intern. – Feb 2022 – present.</i><br>
-                    <ul>Starting this month as Full Stack Developer Intern in IBM Consulting</ul>
-                    <i>Latin America Cloud Platform Intern. – May 2021 – Feb 2022.</i> <br>
-                    <ul>The position consolidates all sales related areas in the IBM Cloud Computing Services, supporting operations and selling related activities;</ul>
-                    <ul>Operational support for the sales and tech sales teams, for billing and negotiation;</ul>
-                    <ul>Building reports and basic financial data analysis to support sales managers on their strategies for the Latin American region;</ul>
-                    <ul>Preparing and delivering presentations to various groups to support the team’s strategy;</ul>
-                    <ul>Working with the solutions architect responsible for pricing and designing the client’s best case on the implementation of the IBM Cloud;</ul>
-                    <ul>Working with sales managers in client meetings to support negotiation;</ul>
-                    <ul>Volunteering as a mentor to other interns in a conversation club, both managing the project and holding meetings classes.</ul>
-
-                </div><!-- current -->
-
-                <div class="current">
-                    <h3>PAST LEGAL EXPERIENCE:</h3>
-                    <b>Autonomous Lawyer</b> <br><br>
-                    <i>Lawyer – Sep. 2013 – Nov. 2020 (and before Jul. 2011 – Jul. 2012).</i><br>
-                    <ul>Worked with contracts, corporate and consumer law; prepared pleadings, attended court hearings, hold meetings with clients and other activities related to the profession.</ul>
-                    <b>CCLM Associated Lawyers / BV Financial</b><br><br>
-                    <i>Jr. Lawyer – Oct. 2012 – Aug. 2013</i> <br>
-                    <ul>Worked as outsourced lawyer at the Legal Department of BV Financial; responsible for monitoring lawsuits; contacted outsourced law firms for managing the company’s causes. </ul>
-                </div><!-- current -->
-
-                <div class="current">
-                    <h3>EDUCATION AND LANGUAGES:</h3>
-                    <ul><b>Analysis and system development</b>, IT Technologist – Centro Universitário Senac (SENAC). Graduation: Dec.2022.</ul>
-                    <ul><b>Law</b>, Bachelor of Law – Universidade Católica de Santos (UNISANTOS). Graduation: Dec. 2010.</ul>
-
-                    <ul>
-                        <div class="languages">
-                            <div class="lh"><br></div>
-                            <div class="lh"><b>Reading</b></div>
-                            <div class="lh"><b>Speaking</b></div>
-                            <div class="lh"><b>Writing</b></div> 
-
-                        </div>
-                        <div class="languages">
-                            <div class="lh"><b>Portuguese</b></div>
-                            <div class="separa">Native</div>
-                            <div class="separa">Native</div>
-                            <div class="separa">Native</div>
-                        </div>
-
-                        <div class="languages">
-                            <div class="lh"><b>English</b></div>
-                            <div class="separa">Fluent</div>
-                            <div class="separa">Fluent</div>
-                            <div class="separa">Fluent</div>
-                        </div>
-                        <div class="languages">
-                            <div class="lh"><b>Spanish</b></div>
-                            <div class="separa">Basic</div>
-                            <div class="separa">Elementary</div>
-                            <div class="separa">Basic</div>
-                        </div>
-                    </ul>
-
-                    <h4>Others:</h4>
-                    <ul><b>Excel</b> (intermediate).</ul>
-                    <ul><b>Java</b> (intermediate).</ul>
-                    <ul><b>Phyton, SQL, HTML/CSS, IBM Cloud and Git/GitHub</b> (basic).</ul>
-
-                </div><!-- current -->
-
-                <div class="current-rodape">
-                    <h3>CREDENTIALS:</h3>
-
-                    <img src="IBM-Agile.png">
-                    <img src="IBM-Cloud-1.png">
-                    <img src="IBM-Cloud-2.png">
-                    <img src="DesignThinking.png">
-
-                </div>
-            </div> <!-- container -->
-        </div> <!-- fundo -->
-        <footer>
-            <br>
-            <br>
-            <br>
-        </footer>
+        <div>
+        <h1>Dados Pessoais</h1>
+        <p>Nome: <span th:text="${dadosPessoais.nome}"></span></p> <!-- dadosPessoais.nome equivale a dadosPessoais.getNome() -->
+        <p>Data nascimento: <span th:text="${dadosPessoais.dataNascimento}"></span></p>
+        <p>Telefone: <span th:text="${dadosPessoais.telefone}"></span></p>
+        <p>E-mail: <span th:text="${dadosPessoais.email}"></span></p>
+        <div>
 
     </body>
 </html>

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author maris
  */
 
-@Controller
+/*@Controller
 public class IndexController {
 
     @GetMapping("/")
     public String showIndex() {
         return "index";
     }
-}
+}*/

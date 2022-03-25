@@ -5,6 +5,8 @@
  */
 package com.dw.ado2cv;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author maris
@@ -12,16 +14,16 @@ package com.dw.ado2cv;
 public class DadosPessoais {
     
     private String nome;
-    private String dataNasc;
+    private LocalDate dataNascimento;
     private String telefone;
     private String email;
 
     public DadosPessoais() {
     }
 
-    public DadosPessoais(String nome, String dataNasc, String telefone, String email) {
+    public DadosPessoais(String nome, String dataNascimentoStr, String telefone, String email) {
         this.nome = nome;
-        this.dataNasc = dataNasc;
+        this.dataNascimento = LocalDate.parse(dataNascimentoStr);;
         this.telefone = telefone;
         this.email = email;
     }
@@ -34,12 +36,12 @@ public class DadosPessoais {
         this.nome = nome;
     }
 
-    public String getDataNasc() {
-        return dataNasc;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setDataNasc(String dataNasc) {
-        this.dataNasc = dataNasc;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getTelefone() {
@@ -57,7 +59,8 @@ public class DadosPessoais {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+
     
     
     
